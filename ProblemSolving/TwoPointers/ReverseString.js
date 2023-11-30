@@ -9,7 +9,6 @@ const reverseString = function(s) {
     // reverse() to reverse the new array.
     splitString.reverse();
 
-    // join() to join the array back into a string.
     return splitString;
     
 };
