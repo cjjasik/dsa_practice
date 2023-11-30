@@ -3,6 +3,6 @@
  * @param {number} k
  * @return {boolean}
  */
-var containsNearbyDuplicate = function(nums, k) {
+const containsNearbyDuplicate = function(nums, k) {
     
 };
