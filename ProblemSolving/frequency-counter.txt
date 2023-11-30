@@ -1,5 +1,5 @@
-// LEETCODE DESCRIPTION: FREQUENCY COUNTER
-// #308: RANSOM NOTE
+// LEETCODE #308: FREQUENCY COUNTER
+Level: EASY
 
 Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
 
