@@ -1,25 +1,24 @@
-const getMostCommonFirstName = require('./frequencyCounter');
+const getMostCommonFirstName = require('./EXAMPLE-FC');
 
-describe('Returns the most common first name from an array of full names'), () => {
-
+describe('getMostCommonFirstName', ()=>{
     test('returns the most common first name', () => {
-        const names = ['John Doe', 'Jane Doe', 'Jane Smith', 'John Smith', 'John Johnson'];
-        expect(getMostCommonFirstName(names)).toEqual('John');
+        const names = ['John Doe', 'Jane Doe', 'John Smith', 'Jane Smith', 'John Johnson'];
+        expect(getMostCommonFirstName(names)).toEqual('john');
+      });
+
+    test('return first name if all have the most frequency',()=>{
+        const names = ['John Doe', 'Jane Smith', 'Mary Johnson'];
+        expect(getMostCommonFirstName(names)).toEqual('john');
     });
 
-    test('return first name if all have the most frequency', () => {
-        const names = ["John Doe", "Jane Doe", "Mary Johnson"];
-        expect(getMostCommonFirstName(names)).toEqual("John");
+    test('ignore case sensitivity', ()=>{
+        const names = ['john doe', 'Jane Doe', 'John Smith', 'Jane Smith', 'john Johnson'];
+        expect(getMostCommonFirstName(names)).toEqual('john');
     });
 
-    test('ignore case sensitivity', () => {
-        const names = ['john Doe', 'Jane Doe', 'jane Smith', 'John Smith', 'john Johnson'];
-        expect(getMostCommonFirstName(names)).toEqual('John');
-    });
-
-    test('empty array returns undefined', () => {
-        const names = ['john Doe', 'Jane Doe', 'jane Smith', 'John Smith', 'john Johnson'];
+    test('empty array returns undefined',()=>{
+        const names = [];
         expect(getMostCommonFirstName(names)).toEqual(undefined);
-    });
+    })
 
-};
+});
