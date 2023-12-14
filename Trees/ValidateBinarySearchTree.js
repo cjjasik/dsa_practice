@@ -62,15 +62,50 @@ class BinarySearchTree {
         // the root is the top node, all searches start here.
         this.root = null;
     }
+
+    insert(value){
+        let newNode = new Node(value);
+        // first value inserted becomes the root node.
+        if(!this.root){
+            this.root = newNode
+        } else {
+            let current = this.root;
+            // if the value is already in the tree, don't add again.
+            while(true){
+                if (value === current.value){
+                    return undefined;
+                }
+                // if the value added is less than the current node being examined...
+                if (value < current.value){
+                    // and the current node has no left child, add this as the left child.
+                    if (current.left == null){
+                        current.left = newNode;
+                        return this;
+                    }
+                    // if the current node has a left child, examine that node.
+                    current = current.left;
+                } else {
+                    // if the value is greater than the current node being examined...
+                    // and the current node has no right child, add this as the right child.
+                    if (current.right == null) {
+                        current.right = newNode;
+                        return this;
+                    }
+                    // if the current node HAS a right child, examine that node.
+                    current = current.right;
+                }
+            }
+        }
+    }
 }
 
 
-var isValidBST = function(root) {
-    // build the tree
-    // traverse the tree and check rules
-        // if rules are broken = return false. else return true.
+// var isValidBST = function(root) {
+//     // build the tree
+//     // traverse the tree and check rules
+//         // if rules are broken = return false. else return true.
 
-};
+// };
 
 
 module.exports = BinarySearchTree.js
