@@ -1,4 +1,4 @@
-const BinarySearchTree = require('./ValidateBinarySearchTree');
+const BinarySearchTree = require('./BinarySearchTree');
 
 test('Should create an empty tree', () => {
   const bst = new BinarySearchTree();

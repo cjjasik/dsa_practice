@@ -49,6 +49,7 @@ The number of nodes in the tree is in the range [1, 104].
 
 class Node {
     constructor(value) {
+        // stores data and points to a left and right child node.
         this.value;
         this.left = null;
         this.right = null;
@@ -56,9 +57,20 @@ class Node {
 };
 
 
+class BinarySearchTree {
+    constructor() {
+        // the root is the top node, all searches start here.
+        this.root = null;
+    }
+}
+
+
 var isValidBST = function(root) {
-    
+    // build the tree
+    // traverse the tree and check rules
+        // if rules are broken = return false. else return true.
+
 };
 
 
-module.exports = isValidBST.js
+module.exports = BinarySearchTree.js
